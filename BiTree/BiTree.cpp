@@ -3,13 +3,16 @@
 #include "BiTree.h"
 
 void BiTree::insertValue(int value){
-    Node *newNode = (Node *)malloc(sizeof(Node));
+    Node * newNode = (Node *)malloc(sizeof(Node));
+    newNode->value = value;
+    newNode->left = NULL;
+    newNode->rigth = NULL;
 
-    if (this->root == NULL) this->root = newNode;
-        
+    if (root == NULL) this->root = newNode;
+
     else {
-        Node *aux = this->root;
-        Node *parent;
+        Node * aux = root;
+        Node * parent;
 
         while (aux != NULL) {
             parent = aux;
@@ -25,4 +28,19 @@ void BiTree::insertValue(int value){
             }
         }
     }
+}
+
+void BiTree::searchValue(int value){
+    Node * aux = root;
+    while(aux != NULL){
+        if(value == aux->value) {
+            printf("Valor %d encontrado\n", value);
+            break;
+        }
+        else if(value > aux->value) aux = aux->rigth;
+        else if (value < aux-> value) aux = aux->left;
+    }
+
+
+    if(aux == NULL) printf("Valor não encotrado na Árvore\n");
 }
