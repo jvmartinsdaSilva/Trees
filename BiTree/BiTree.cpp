@@ -41,6 +41,5 @@ void BiTree::searchValue(int value){
         else if (value < aux-> value) aux = aux->left;
     }
 
-
     if(aux == NULL) printf("Valor não encotrado na Árvore\n");
 }
