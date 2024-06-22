@@ -41,7 +41,7 @@ void BiTree::searchValue(int value){
     while(aux != NULL){
         if(value == aux->value) {
             printf("Valor %d encontrado\n", value);
-            break;
+            return;
         }
         else if(value > aux->value) aux = aux->rigth;
         else if (value < aux-> value) aux = aux->left;
