@@ -7,7 +7,7 @@ Node * BiTree::createNode(int value){
     newNode->value = value;
     newNode->left = NULL;
     newNode->rigth = NULL;
-    return newNode
+    return newNode;
 }
 
 void BiTree::insertValue(int value){
