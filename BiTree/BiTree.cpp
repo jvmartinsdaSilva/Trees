@@ -8,24 +8,25 @@ void BiTree::insertValue(int value){
     newNode->left = NULL;
     newNode->rigth = NULL;
 
-    if (root == NULL) this->root = newNode;
+    if (root == NULL) {
+        this->root = newNode;
+        return;
+    }
 
-    else {
-        Node * aux = root;
-        Node * parent;
+    Node * aux = root;
+    Node * parent;
 
-        while (aux != NULL) {
-            parent = aux;
-            if (value > aux->value) {
-                // printf("%d - RIGTH\n", value);
-                aux = aux->rigth;
-                if (aux == NULL) parent->rigth = newNode;             
-            }
-            else {
-                // printf("%d - LEFT\n", value);
-                aux = aux->left;
-                if (aux == NULL) parent->left = newNode;            
-            }
+    while (aux != NULL) {
+        parent = aux;
+        if (value > aux->value) {
+            // printf("%d - RIGTH\n", value);
+            aux = aux->rigth;
+            if (aux == NULL) parent->rigth = newNode;             
+        }
+        else {
+            // printf("%d - LEFT\n", value);
+            aux = aux->left;
+            if (aux == NULL) parent->left = newNode;            
         }
     }
 }
