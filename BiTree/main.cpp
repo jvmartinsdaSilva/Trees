@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 int main(){
-    BiTree tree;
-    tree.insertValue(5);
-    tree.insertValue(7);
-    tree.insertValue(9);
-    tree.searchValue(7);
+    BiTree biTree;
+    biTree.insertValue(5);
+    biTree.insertValue(7);
+    biTree.insertValue(9);
+    biTree.searchValue(7);
 }

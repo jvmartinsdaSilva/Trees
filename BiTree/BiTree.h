@@ -5,11 +5,11 @@ typedef struct Node {
 } Node ;
 
 class BiTree {
+        private:
+                Node * root;
+                Node * createNode(int value);
 
-    public: Node * root;
-    public: int teste = 7;
-
-    public:
-        void insertValue(int value);
-        void searchValue(int value);
+        public:
+                void insertValue(int value);
+                void searchValue(int value);
 };

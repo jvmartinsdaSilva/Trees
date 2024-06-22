@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include "BiTree.h"
 
-void BiTree::insertValue(int value){
-    Node * newNode = (Node *)malloc(sizeof(Node));
+Node * BiTree::createNode(int value){
+    Node * newNode = (Node*) malloc(sizeof(Node));
     newNode->value = value;
     newNode->left = NULL;
     newNode->rigth = NULL;
+    return newNode
+}
+
+void BiTree::insertValue(int value){
+    Node * newNode = createNode(value);
 
     if (root == NULL) {
         this->root = newNode;
